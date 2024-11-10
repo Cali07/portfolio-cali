@@ -56,7 +56,7 @@ You will find a file named `index.html` Open it and follow the guidance inscribe
 
 ```html
 <!-- Update with your name -->
-<title>Syed Mohsin's Portfolio</title>
+<title>Calistas Mlilo Portfolio</title>
 ```
 
 ```html

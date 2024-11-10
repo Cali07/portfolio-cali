@@ -422,6 +422,57 @@ main {
 /* ----- Navigation -----*/
 /* --------------------------------- */
 
+/* Style for the button */
+.navbar-toggler {
+  background-color: transparent; /* Ensures no background color */
+  border: none; /* Removes border */
+}
+
+/* Custom hamburger icon */
+.navbar-toggler .navbar-toggler-icon {
+  display: inline-block;
+  width: 30px; /* Width of the hamburger menu */
+  height: 2px; /* Height of each line */
+  background-color: #fff; /* Color of the hamburger lines */
+  position: relative;
+}
+
+/* Before and After pseudo-elements for the top and bottom lines */
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  transition: all 0.3s ease-out;
+}
+
+.navbar-toggler .navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler .navbar-toggler-icon::after {
+  bottom: -8px;
+}
+
+/* Styling for when the navbar is toggled/collapsed */
+.navbar-toggler.collapsed .navbar-toggler-icon {
+  background-color: transparent; /* Hide middle line */
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon::before {
+  transform: rotate(45deg); /* Rotate to form 'X' */
+  top: 0;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon::after {
+  transform: rotate(-45deg); /* Rotate to form 'X' */
+  bottom: 0;
+}
+
+
 .nav {
   min-block-size: 100vh;
   position: fixed;
@@ -446,9 +497,9 @@ main {
 
 .nav-item a {
   display: inline-block;
-  font-size: var(--h2);
+  font-size: var(--h3);
   text-decoration: none;
-  color: #fff;
+  color: hwb(0 100% 0%) !important;
 }
 
 .nav-item a::after {
