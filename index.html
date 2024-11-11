@@ -41,8 +41,8 @@
 <!-- Update favicon href attribute with image of yourself -->
     <link
       rel="shortcut icon"
-      href="assets/images/favicons.png"
-      type="image/png"
+      href="assets/images/profile.jpg"
+      type="image/jpg+"
     />
 
     <!-- Preloading fonts for better performance -->
@@ -54,7 +54,8 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"  />
     <script src="script.js" defer></script>
 
@@ -72,10 +73,10 @@
     <header class="header">
 
       <nav class="navbar navbar-expand-lg">
-        <button class="navbar-toggler text-white" type="button"
+        <button class="navbar-toggler text-white " type="button"
           data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" 
           aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon mb-2"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
@@ -92,11 +93,12 @@
       <div class="container">
         <div class="header-textbox">
           <!-- Replace with your name and job title -->
-          <h1 class="h1">
+          <div class="mb-5">
+          <h1 class="h1 ">
             <span>Hi, I'm Calistas Mlilo</span>
             <span>Full-Stack Developer</span>
           </h1>
-
+          </div>
           <!-- Add a small introductory paragraph about yourself -->
           <p class="header-text">
             A  software engineer and interface designer who builds UX
@@ -116,34 +118,34 @@
         <div class="container">
           <h2 class="h2">Worked with </h2>
           <div class="logos">
-            <!-- Replace alt with client/company name and src attributes of images with path to relative img of client logo -->
+            <!-- svg 1500W x 500H of client logo -->
             <div class="logo-group">
               <img
                 loading="lazy"
-                src="assets/images/trusted-by/stripe.svg"
-                alt="Ideacraft"
+                src="assets/images/trusted-by/kagiso.svg"
+                alt="Kagiso-trust"
                 class="logo hide to-top"
               />
 
               <img
                 loading="lazy"
-                src="assets/images/trusted-by/datastax.svg"
-                alt="Golden grid"
+                src="assets/images/trusted-by/AWS.svg"
+                alt="Amazon web services"
                 class="logo"
               />
 
               <img
                 loading="lazy"
-                src="assets/images/trusted-by/coke.svg"
-                alt="Theia"
+                src="assets/images/trusted-by/coe.svg"
+                alt="City of Ekurhuleni"
                 class="logo hide to-bottom"
               />
             </div>
             <div class="logo-group">
               <img
                 loading="lazy"
-                src="assets/images/trusted-by/gm.svg"
-                alt="General motors"
+                src="assets/images/trusted-by/wtc.svg"
+                alt="WeThinkCode"
                 class="logo hide to-top"
               />
 
@@ -163,8 +165,8 @@
             <div class="logo-group">
               <img
                 loading="lazy"
-                src="assets/images/trusted-by/agency-elevation.svg"
-                alt="Agency elevation"
+                src="assets/images/trusted-by/github.svg"
+                alt="GitHub"
                 class="logo hide to-top"
               /><img
                 loading="lazy"
@@ -173,28 +175,28 @@
                 class="logo"
               /><img
                 loading="lazy"
-                src="assets/images/trusted-by/duolingo.svg"
-                alt="Mighty furniture's"
+                src="assets/images/trusted-by/Investec_logo.svg"
+                alt="Investec"
                 class="logo hide to-bottom"
               />
             </div>
             <div class="logo-group">
               <img
                 loading="lazy"
-                src="assets/images/trusted-by/coyote.svg"
-                alt="Bulls eye"
+                src="assets/images/trusted-by/epf(2).svg"
+                alt="Empire Partner Fondation"
                 class="logo hide to-top"
               />
               <img
-                loading="lazy"
-                src="assets/images/trusted-by/astrato.svg"
-                alt="Chippy"
-                class="logo"
+                    loading="lazy"
+                    src="assets/images/trusted-by/epf(2).svg"
+                    alt="Empire Partner Fondation"
+                    class="logo hide to-top"
               />
               <img
                 loading="lazy"
-                src="assets/images/trusted-by/mercado.svg"
-                alt="Fastlane"
+                src="assets/images/trusted-by/wtc.svg"
+                alt="WeThinkCode"
                 class="logo hide to-bottom"
               />
             </div>
@@ -209,29 +211,30 @@
             <div class="work-box">
               <div class="work-textbox">
                 <!-- Add your project title here -->
-                <h3 class="h3">portfolio template</h3>
+                <h3 class="h3">Cyber-Guard</h3>
                 <!-- Add small description of your project  -->
                 <p class="work-text">
-                  A free to use, minimal and accessible portfolio template for
-                  developers.
+                  Developed at the ITWeb Summit Hackathon, CyberGuard is a comprehensive anti-phishing solution designed to prevent phishing scams and protect users from fraudulent and unsafe websites.
+                  The project features an email scanner that detects phishing attempts and a custom browser extension that continuously scans websites visited by the user.
+                  It flags potentially harmful sites and recommends safer alternatives to enhance online security.
                 </p>
                 <!-- Add technologies you used to build the project -->
                 <ol class="work-technologies">
-                  <li>React</li>
-                  <li>Gatsby</li>
-                  <li>SCSS</li>
-                  <li>MDX</li>
+                  <li>JavaScript</li>
+                  <li>Python</li>
+                  <li>Css</li>
+                  <li>Flask</li>
                 </ol>
 
                 <div class="work-links">
                   <!-- Add url of project in href attribute -->
-                  <a href="https://github.com/devsyedmohsin" target="_blank" rel="noopener" class="link"
+                  <a href="https://github.com/Kyle-ND/MzansiHub-Fraud-Detector" target="_blank" rel="noopener" class="link"
                     >Explore this project</a
                   >
 
                   <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
                   <a
-                    href="https://github.com/devsyedmohsin"
+                    href="https://github.com/Kyle-ND/MzansiHub-Fraud-Detector"
                     target="_blank"
                     rel="noopener"
                     title="Source code"
@@ -250,7 +253,7 @@
               <picture class="work-img">
                 <img
                   loading="lazy"
-                  src="assets/images/work/portfolio-template.webp"
+                  src="assets/images/work/cyb.png"
                   alt="agency elevation"
                 />
               </picture>
@@ -258,14 +261,17 @@
             <div class="work-box">
               <div class="work-textbox">
                 <!-- Add your project title here -->
-                <h3 class="h3">agencyelevation.com</h3>
+                <h3 class="h3">SmartCareer-Hub</h3>
                 <!-- Add small description of your project  -->
 
-                <p class="work-text">Website for Agency Elevation.</p>
+                <p class="work-text">Welcome to SmartCareer-Hub, your one-stop platform for career development!
+                  This Django-based project was crafted with passion during the Melosft Hackathon.
+                  This project was one of our first to be deployed using Render. The job search feature currently aggregates listings from over 30 different popular job sites, directly linking you to the job posts in realtime.
+                  The interview simulation is designed to prepare youth for real-life job interviews.</p>
                 <ol class="work-technologies">
-                  <li>React</li>
-                  <li>Gatsby</li>
-                  <li>Material UI</li>
+                  <li>Django</li>
+                  <li>Bootstrap</li>
+                  <li>Web API's</li>
                 </ol>
                 <div class="work-links">
                   <!-- Add url of project in href attribute -->
@@ -275,7 +281,7 @@
 
                      <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
                   <a
-                    href="http://github.com/devsyedmohsin"
+                    href="https://github.com/TheeSocerer/SmartCareer-Hub"
                     target="_blank"
                     rel="noopener"
                     title="Source code"
@@ -292,7 +298,7 @@
               <picture class="work-img">
                 <img
                   loading="lazy"
-                  src="assets/images/work/agency-elevation.webp"
+                  src="assets/images/work/SmartCareer-Hub.png"
                   alt="portfolio template"
                 />
               </picture>
@@ -300,25 +306,26 @@
             <div class="work-box">
               <div class="work-textbox">
                 <!-- Add your project title here -->
-                <h3 class="h3">contribute.dev</h3>
+                <h3 class="h3">Persona</h3>
                 <!-- Add small description of your project  -->
                 <p class="work-text">
-                  Website for DevX A dedicated space for developer experience
+                  Persona is an advanced AI-powered customer service application designed to enhance customer support and streamline problem resolution for companies.
+                  Built with a focus on providing a personalized and efficient customer experience, Persona integrates seamlessly into existing customer service workflows, helping businesses reduce operational costs and improve efficiency.
                 </p>
                 <ol class="work-technologies">
-                  <li>Ruby</li>
-                  <li>SvelteKit</li>
-                  <li>Emotion</li>
+                  <li>Django</li>
+                  <li>Python</li>
+                  <li>OpenAI AI</li>
                 </ol>
                 <div class="work-links">
                   <!-- Add url of project in href attribute -->
-                  <a href="#" target="_blank" rel="noopener" class="link"
+                  <a href="https://github.com/TheeSocerer/nerdma-hackathon" target="_blank" rel="noopener" class="link"
                     >Explore this project</a
                   >
 
                    <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
                   <a
-                    href="#"
+                    href="https://github.com/TheeSocerer/nerdma-hackathon"
                     target="_blank"
                     rel="noopener"
                     title="Source code"
@@ -335,7 +342,7 @@
               <picture class="work-img">
                 <img
                   loading="lazy"
-                  src="assets/images/work/contribute-dev.webp"
+                  src="assets/images/work/nedrma.png"
                   alt="contribute dev"
                 />
               </picture>
@@ -351,16 +358,21 @@
         <div class="container">
           <h2 class="h2" id="skills">My Toolkit</h2>
           <div class="skills-imgs">
-                <img src="assets/images/skills/react.webp" alt="React" class="skills-img" loading="lazy" title="React">
-                <img src="assets/images/skills/svelte.webp" alt="Svelte" class="skills-img" loading="lazy" title="Svelte">
-                 <img src="assets/images/skills/typescript.webp" alt="Typescript" class="skills-img" loading="lazy" title="Typescript">
-                 <img src="assets/images/skills/a11y.webp" alt="Accessibility" class="skills-img" loading="lazy" title="Web Accessibility">
-                 <img src="assets/images/skills/shell.webp" alt="Shell" class="skills-img" loading="lazy" title="Shell">
-                 <img src="assets/images/skills/next-js.webp" alt="NextJS" class="skills-img" loading="lazy" title="NextJS">
-                 <img src="assets/images/skills/graphql.webp" alt="Graph Ql" class="skills-img" loading="lazy" title="Graph QL">
-                 <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
-                 <img src="assets/images/skills/html.webp" alt="CSS" class="skills-img" loading="lazy" title="CSS">
-                 <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+            <img src="assets/images/skills/angu.png" alt="Angular" class="skills-img" loading="lazy" title="Angular">
+            <img src="assets/images/skills/vue.png" alt="Vue" class="skills-img" loading="lazy" title="Vue">
+             <img src="assets/images/skills/typescript.webp" alt="Typescript" class="skills-img" loading="lazy" title="Typescript">
+            <img src="assets/images/skills/next-js.webp" alt="NextJS" class="skills-img" loading="lazy" title="NextJS">
+            <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+            <img src="assets/images/skills/bootstrap.png" alt="BootStrap" class="skills-img" loading="lazy" title="BootStrap">
+            <img src="assets/images/skills/nuxtjs.png" alt="NuxtJs" class="skills-img" loading="lazy" title="NuxtJs">
+            <img src="assets/images/skills/a11y.webp" alt="Accessibility" class="skills-img" loading="lazy" title="Web Accessibility">
+            <img src="assets/images/skills/java.png" alt="Java" class="skills-img" loading="lazy" title="Java">
+            <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
+            <img src="assets/images/skills/shell.webp" alt="Shell" class="skills-img" loading="lazy" title="Shell">
+            <img src="assets/images/skills/python.png" alt="Python" class="skills-img" loading="lazy" title="Python">
+            <img src="assets/images/skills/flask.png" alt="Flask" class="skills-img" loading="lazy" title="Flask">
+            <img src="assets/images/skills/django.png" alt="Django" class="skills-img" loading="lazy" title="Django">
+            <img src="assets/images/skills/sql.png" alt="SQL" class="skills-img" loading="lazy" title="SQL">
             </figure>
           </div>
         </div>
@@ -426,6 +438,7 @@
       <div class="container">
         <div class="footer-content">
           <!-- Update href and src attributes -->
+
           <nav>
             <ol class="footer-links">
               <li class="footer-link">
