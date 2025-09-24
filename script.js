@@ -1,40 +1,48 @@
-// const nav = document.querySelector(".nav");
-// const navMenu = document.querySelector(".nav-items");
-// const btnToggleNav = document.querySelector(".menu-btn");
+const navToggle = document.querySelector(".nav-toggle");
+const navLinksWrapper = document.querySelector(".nav-links");
+const navMenuLinks = document.querySelectorAll(".nav-menu a");
 const workEls = document.querySelectorAll(".work-box");
 const workImgs = document.querySelectorAll(".work-img");
 const mainEl = document.querySelector("main");
 const yearEl = document.querySelector(".footer-text span");
 
-// const toggleNav = () => {
-//   nav.classList.toggle("hidden");
+const setNavState = (isOpen) => {
+  if (!navToggle || !navLinksWrapper) return;
 
-//   // Prevent screen from scrolling when menu is opened
-//   document.body.classList.toggle("lock-screen");
+  navToggle.setAttribute("aria-expanded", isOpen);
+  navToggle.classList.toggle("is-open", isOpen);
+  navLinksWrapper.classList.toggle("is-open", isOpen);
+  document.body.classList.toggle("lock-screen", isOpen);
+};
 
-//   if (nav.classList.contains("hidden")) {
-//     btnToggleNav.textContent = "menu";
-//   } else {
-//     // When menu is opened after transition change text respectively
-//     setTimeout(() => {
-//       btnToggleNav.textContent = "close";
-//     }, 475);
-//   }
-// };
+if (navToggle && navLinksWrapper) {
+  navToggle.addEventListener("click", () => {
+    const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+    setNavState(!isExpanded);
+  });
+}
 
-// btnToggleNav.addEventListener("click", toggleNav);
+navMenuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (!navToggle) return;
 
-// navMenu.addEventListener("click", (e) => {
-//   if (e.target.localName === "a") {
-//     toggleNav();
-//   }
-// });
+    const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+    if (isExpanded) {
+      setNavState(false);
+      navToggle.focus();
+    }
+  });
+});
 
-// document.body.addEventListener("keydown", (e) => {
-//   if (e.key === "Escape" && !nav.classList.contains("hidden")) {
-//     toggleNav();
-//   }
-// });
+document.addEventListener("keydown", (event) => {
+  if (
+    event.key === "Escape" &&
+    navLinksWrapper?.classList.contains("is-open")
+  ) {
+    setNavState(false);
+    navToggle?.focus();
+  }
+});
 
 // Animating work instances on scroll
 
@@ -47,11 +55,11 @@ let observer = new IntersectionObserver(
     if (entry.isIntersecting) {
       picture.classList.remove("transform");
       Array.from(textbox.children).forEach(
-        (el) => (el.style.animationPlayState = "running")
+        (el) => (el.style.animationPlayState = "running"),
       );
     }
   },
-  { threshold: 0.3 }
+  { threshold: 0.3 },
 );
 
 workEls.forEach((workEl) => {
@@ -84,10 +92,13 @@ switchThemeEl.addEventListener("click", () => {
 
 const lastFocusedEl = document.querySelector('a[data-focused="last-focused"]');
 
-document.body.addEventListener("keydown", (e) => {
-  if (e.key === "Tab" && document.activeElement === lastFocusedEl) {
-    e.preventDefault();
-    btnToggleNav.focus();
+document.body.addEventListener("keydown", (event) => {
+  const isTab = event.key === "Tab" && !event.shiftKey;
+  const navIsOpen = navToggle?.getAttribute("aria-expanded") === "true";
+
+  if (isTab && navIsOpen && document.activeElement === lastFocusedEl) {
+    event.preventDefault();
+    navToggle.focus();
   }
 });
 

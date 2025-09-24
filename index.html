@@ -84,36 +84,40 @@
       document.body.classList.add(theme);
     </script>
 
-    <header class="header">
-      <nav class="navbar navbar-expand-lg">
-        <button
-          class="navbar-toggler text-white"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon mb-2"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item mx-2"><a href="#">Home</a></li>
-            <li class="nav-item mx-2"><a href="#about">About</a></li>
-            <li class="nav-item mx-2"><a href="#experience">Experience</a></li>
-            <li class="nav-item mx-2"><a href="#work">Projects</a></li>
-            <li class="nav-item mx-2"><a href="#skills">Skills</a></li>
-            <li class="nav-item mx-2">
-              <a href="#credentials">Credentials</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a href="#contact" data-focused="last-focused">Contact</a>
-            </li>
-          </ul>
+    <header class="header" id="top">
+      <nav class="site-nav" aria-label="Primary">
+        <div class="container nav-container">
+          <a class="nav-brand" href="#top">
+            <span class="brand-mark" aria-hidden="true">CM</span>
+            <span class="brand-copy">
+              <span class="brand-name">Calistas Mlilo</span>
+              <span class="brand-role">Full-Stack Developer</span>
+            </span>
+          </a>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+          >
+            <span class="visually-hidden">Toggle navigation</span>
+            <span class="nav-toggle-icon" aria-hidden="true"></span>
+          </button>
+          <div class="nav-links" id="primary-navigation">
+            <ul class="nav-menu">
+              <li class="nav-item"><a href="#top">Home</a></li>
+              <li class="nav-item"><a href="#about">About</a></li>
+              <li class="nav-item"><a href="#experience">Experience</a></li>
+              <li class="nav-item"><a href="#work">Projects</a></li>
+              <li class="nav-item"><a href="#skills">Skills</a></li>
+              <li class="nav-item"><a href="#credentials">Credentials</a></li>
+              <li class="nav-item nav-item-cta">
+                <a href="#contact" class="nav-cta" data-focused="last-focused"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
 
@@ -404,41 +408,32 @@
           <div class="work-boxes">
             <div class="work-box">
               <div class="work-textbox">
-                <h3 class="h3">HackTheJob</h3>
+                <!-- Add your project title here -->
+                <h3 class="h3">SmartCareer-Hub</h3>
+                <!-- Add small description of your project  -->
+
                 <p class="work-text">
-                  A Kagiso Trust Hack-winning job-readiness platform supporting
-                  youth with curated resources, mentor guidance, and interview
-                  preparation tools.
+                  Welcome to SmartCareer-Hub, your one-stop platform for career
+                  development! This Django-based project was crafted with
+                  passion during the Melosft Hackathon. This project was one of
+                  our first to be deployed using Render. The job search feature
+                  currently aggregates listings from over 30 different popular
+                  job sites, directly linking you to the job posts in realtime.
+                  The interview simulation is designed to prepare youth for
+                  real-life job interviews.
                 </p>
-                <ul class="impact-list">
-                  <li>
-                    Co-designed onboarding flows that help job seekers capture
-                    goals, track applications, and connect with mentors.
-                  </li>
-                  <li>
-                    Built content management features with Django and React so
-                    programme managers can publish opportunities quickly.
-                  </li>
-                  <li>
-                    Deployed a proof-of-concept on Azure using GitLab CI/CD to
-                    collect feedback from stakeholders.
-                  </li>
-                </ul>
                 <ol class="work-technologies">
                   <li>Django</li>
-                  <li>React</li>
-                  <li>TypeScript</li>
-                  <li>Azure</li>
-                  <li>GitLab CI</li>
+                  <li>Bootstrap</li>
+                  <li>Web API's</li>
                 </ol>
                 <div class="work-links">
-                  <a
-                    href="https://github.com/TheeSocerer/SmartCareer-Hub"
-                    target="_blank"
-                    rel="noopener"
-                    class="link"
+                  <!-- Add url of project in href attribute -->
+                  <a href="#" target="_blank" rel="noopener" class="link"
                     >Explore this project</a
                   >
+
+                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
                   <a
                     href="https://github.com/TheeSocerer/SmartCareer-Hub"
                     target="_blank"
@@ -453,44 +448,95 @@
                   </a>
                 </div>
               </div>
+              <!-- Update img src and alt attribute  -->
               <picture class="work-img">
                 <img
                   loading="lazy"
                   src="assets/images/work/SmartCareer-Hub.png"
-                  alt="HackTheJob job readiness dashboard"
+                  alt="portfolio template"
                 />
               </picture>
             </div>
             <div class="work-box">
               <div class="work-textbox">
-                <h3 class="h3">Persona</h3>
+                <!-- Add your project title here -->
+                <h3 class="h3">Cyber-Guard</h3>
+                <!-- Add small description of your project  -->
                 <p class="work-text">
-                  Persona is an AI-powered customer service assistant prototype
-                  that streamlines support workflows with predictive analytics
-                  and automated resolutions.
+                  Developed at the ITWeb Summit Hackathon, CyberGuard is a
+                  comprehensive anti-phishing solution designed to prevent
+                  phishing scams and protect users from fraudulent and unsafe
+                  websites. The project features an email scanner that detects
+                  phishing attempts and a custom browser extension that
+                  continuously scans websites visited by the user. It flags
+                  potentially harmful sites and recommends safer alternatives to
+                  enhance online security.
                 </p>
-                <ul class="impact-list">
-                  <li>
-                    Implemented proactive ticket triaging and workflow
-                    automation powered by OpenAI APIs.
-                  </li>
-                  <li>
-                    Designed sentiment-aware assistance that surfaces contextual
-                    responses for support teams.
-                  </li>
-                  <li>
-                    Unified Django, React, OpenAI integrations, and PostgreSQL
-                    analytics to deliver proactive account intelligence.
-                  </li>
-                </ul>
+                <!-- Add technologies you used to build the project -->
                 <ol class="work-technologies">
-                  <li>OpenAI</li>
-                  <li>React</li>
-                  <li>Django</li>
-                  <li>PostgreSQL</li>
+                  <li>JavaScript</li>
+                  <li>Python</li>
+                  <li>Css</li>
+                  <li>Flask</li>
                 </ol>
 
                 <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a
+                    href="https://github.com/Kyle-ND/MzansiHub-Fraud-Detector"
+                    target="_blank"
+                    rel="noopener"
+                    class="link"
+                    >Explore this project</a
+                  >
+
+                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="https://github.com/Kyle-ND/MzansiHub-Fraud-Detector"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <!-- Update img src and alt attribute  -->
+
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/cyb.png"
+                  alt="agency elevation"
+                />
+              </picture>
+            </div>
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">Persona</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                  Persona is an advanced AI-powered customer service application
+                  designed to enhance customer support and streamline problem
+                  resolution for companies. Built with a focus on providing a
+                  personalized and efficient customer experience, Persona
+                  integrates seamlessly into existing customer service
+                  workflows, helping businesses reduce operational costs and
+                  improve efficiency.
+                </p>
+                <ol class="work-technologies">
+                  <li>Django</li>
+                  <li>Python</li>
+                  <li>OpenAI AI</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
                   <a
                     href="https://github.com/TheeSocerer/nerdma-hackathon"
                     target="_blank"
@@ -499,6 +545,7 @@
                     >Explore this project</a
                   >
 
+                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
                   <a
                     href="https://github.com/TheeSocerer/nerdma-hackathon"
                     target="_blank"
@@ -513,52 +560,12 @@
                   </a>
                 </div>
               </div>
-
+              <!-- Update img src and alt attribute  -->
               <picture class="work-img">
                 <img
                   loading="lazy"
                   src="assets/images/work/nedrma.png"
-                  alt="Persona AI assistant interface"
-                />
-              </picture>
-            </div>
-            <div class="work-box">
-              <div class="work-textbox">
-                <h3 class="h3">Bolebana eCommerce Marketplace</h3>
-                <p class="work-text">
-                  A full-stack modernization of a township marketplace,
-                  prioritizing performance, localized content, and mobile-first
-                  commerce journeys.
-                </p>
-                <ul class="impact-list">
-                  <li>
-                    Refactored legacy pages into modern layouts, boosting load
-                    performance and Lighthouse scores across the marketplace.
-                  </li>
-                  <li>
-                    Delivered responsive UX patterns and contextual storytelling
-                    tailored to township shoppers on mobile.
-                  </li>
-                  <li>
-                    Automated inventory synchronisation and order tracking with
-                    Express APIs, MongoDB, and serverless workflows.
-                  </li>
-                </ul>
-                <ol class="work-technologies">
-                  <li>JavaScript</li>
-                  <li>Express</li>
-                  <li>MongoDB</li>
-                  <li>Azure</li>
-                </ol>
-                <div class="work-links">
-                  <a href="#contact" class="link">Request a case study</a>
-                </div>
-              </div>
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/agency-elevation.webp"
-                  alt="Bolebana marketplace redesign"
+                  alt="contribute dev"
                 />
               </picture>
             </div>
